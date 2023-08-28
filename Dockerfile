@@ -1,4 +1,4 @@
-FROM python:3.11.4-alpine3.17 AS builder
+FROM python:3.11.5-alpine3.17 AS builder
 
 RUN apk add --no-cache build-base dbus dbus-glib-dev
 
@@ -13,7 +13,7 @@ RUN pip install \
     dbus-python \
     .
 
-FROM python:3.11.4-alpine3.17
+FROM python:3.11.5-alpine3.17
 
 RUN apk add --no-cache dbus-glib-dev
 
